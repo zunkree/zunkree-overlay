@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<layman>
+    <overlay
+        type = "git"
+        src = "git://github.com/zunkree/zunkree-overlay.git"
+        contact = "zunkree@gmail.com"
+        name = "zunkree-overlay">
+        <link>
+            https://github.com/zunkree/zunkree-overlay
+        </link>
+        <description>Overlay of ebuilds written by zunkree</description>
+    </overlay>
+</layman>
