@@ -9,11 +9,10 @@ inherit git-2
 DESCRIPTION="Package manager for D packages"
 HOMEPAGE="https://github.com/rejectedsoftware/dub"
 EGIT_REPO_URI="https://github.com/rejectedsoftware/dub.git"
-EGIT_COMMIT="v${PV}"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="examples"
 
 DEPEND="dev-lang/dmd
