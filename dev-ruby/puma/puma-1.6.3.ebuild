@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ inherit ruby-fakegem
 DESCRIPTION="Puma is a simple, fast, and highly concurrent HTTP 1.1 server for Ruby web applications."
 HOMEPAGE="https://rubygems.org/gems/puma/versions/1.6.3-java"
 
-LICENSE=""
+LICENSE="BSD"
 SLOT="${PV}"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

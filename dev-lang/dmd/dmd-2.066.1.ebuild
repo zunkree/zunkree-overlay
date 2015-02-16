@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -39,7 +39,7 @@ src_prepare() {
 	cd .. || die
 
 	# Remove precompiled binaries and non-essential files.
-    rm -r README.TXT windows freebsd osx linux/{lib32,lib64} \
+	rm -r README.TXT windows freebsd osx linux/{lib32,lib64} \
 	linux/{bin32,bin64}/{README.TXT,dmd,dmd.conf} \
 	|| die "Failed to remove included binaries"
 
@@ -99,7 +99,7 @@ src_test() {
 
 src_install() {
 	einfo "Installing ${PN}..."
-	
+
 	# Compiler
 	dobin dmd/dmd
 
@@ -109,20 +109,20 @@ src_install() {
 	dobashcomp "${FILESDIR}/${PN}.bashcomp"
 
 	# druntime
-	install_druntime_lib() {	
+	install_druntime_lib() {
 		newlib.a druntime/lib/libdruntime-linux${MODEL}.a libdruntime.a
 		newlib.a druntime/lib/libdruntime-linux${MODEL}so.a libdruntimeso.a
-		newlib.a druntime/lib/libdruntime-linux${MODEL}so.o libdruntimeso.o	
+		newlib.a druntime/lib/libdruntime-linux${MODEL}so.o libdruntimeso.o
 	}
 	dmd_foreach_abi install_druntime_lib
 	insinto /usr/include/dlang/dmd
 	doins -r druntime/import/*
-	
+
 	# Phobos
 	install_phobos_lib() {
-        rm phobos/generated/linux/release/${MODEL}/libphobos2.so.*.o
-        dolib.a  phobos/generated/linux/release/${MODEL}/libphobos2.a
-        dolib.so phobos/generated/linux/release/${MODEL}/libphobos2.so*
+		rm phobos/generated/linux/release/${MODEL}/libphobos2.so.*.o
+		dolib.a  phobos/generated/linux/release/${MODEL}/libphobos2.a
+		dolib.so phobos/generated/linux/release/${MODEL}/libphobos2.so*
 	}
 	dmd_foreach_abi install_phobos_lib
 	insinto /usr/include/dlang/dmd/std
@@ -130,12 +130,12 @@ src_install() {
 	rm -r "phobos/etc/c/zlib" || die
 	insinto /usr/include/dlang/dmd/etc
 	doins -r phobos/etc/*
-	
+
 	# Man pages, docs and samples
 	doman ../man/man1/dmd.1
 	doman ../man/man5/dmd.conf.5
 	# Licenses
-	newdoc dmd/backendlicense.txt BACKEND-LICENSE-dmd 
+	newdoc dmd/backendlicense.txt BACKEND-LICENSE-dmd
 	newdoc dmd/artistic.txt ARTISTIC-LICENSE-dmd
 	newdoc druntime/LICENSE LICENSE-druntime
 	newdoc phobos/LICENSE_1_0.txt LICENSE-phobos
@@ -145,7 +145,7 @@ src_install() {
 	docompress -x /usr/share/doc/${PF}/samples/
 	insinto /usr/share/doc/${PF}/samples/
 	use examples &&	doins -r ../samples/d/*
-	
+
 	if use tools; then
 		doman ../man/man1/dumpobj.1
 		doman ../man/man1/obj2asm.1

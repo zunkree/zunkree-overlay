@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 
-DESCRIPTION="yaml is a LibYAML binding for Lua."
-HOMEPAGE=""
+DESCRIPTION="LibYAML binding for Lua."
+HOMEPAGE="http://yaml.luaforge.net/manual.html"
 SRC_URI="http://files.luaforge.net/releases/yaml/yaml/${PV}/${P}.tar.gz"
 
-LICENSE=""
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

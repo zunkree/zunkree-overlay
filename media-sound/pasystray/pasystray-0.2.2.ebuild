@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header$
+# $Header: $
 
 EAPI=4
 inherit gnome2-utils autotools
@@ -16,20 +16,20 @@ IUSE="libnotify avahi"
 
 RDEPEND=">=media-sound/pulseaudio-1.0[glib,avahi?]
 	avahi? ( >=net-dns/avahi-0.6 )
-    x11-libs/gtk+:3
-    x11-libs/libX11
-    libnotify? ( >=x11-libs/libnotify-0.7 )"
+	x11-libs/gtk+:3
+	x11-libs/libX11
+	libnotify? ( >=x11-libs/libnotify-0.7 )"
 DEPEND="${RDEPEND}
-    virtual/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS README.md TODO"
 
 src_prepare() {
-    eautoreconf
+	eautoreconf
 }
 
 src_configure() {
-    econf $(use_enable libnotify notify)
+	econf $(use_enable libnotify notify)
 	econf $(use_enable avahi)
 }
 

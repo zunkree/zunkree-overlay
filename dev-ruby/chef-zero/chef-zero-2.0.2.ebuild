@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,7 +15,7 @@ SLOT="${PV}"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/json
-				  dev-ruby/rack
-				  >=dev-ruby/hashie-2.0
-				  >=dev-ruby/mixlib-log-1.3"
+ruby_add_rdepend "dev-ruby/json"
+ruby_add_rdepend "dev-ruby/rack:*"
+ruby_add_rdepend "dev-ruby/hashie:*"
+ruby_add_rdepend ">=dev-ruby/mixlib-log-1.3"

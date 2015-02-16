@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,7 +20,6 @@ DEPEND="dev-lang/dmd
 		net-misc/curl"
 RDEPEND="${DEPEND}"
 
-
 src_compile() {
 	./build.sh
 }
@@ -28,9 +27,9 @@ src_compile() {
 src_install() {
 	dobin bin/dub
 	dodoc LICENSE.txt CHANGELOG.md README.md
-    if use examples; then
+	if use examples; then
 		docompress -x /usr/share/doc/${PF}/examples/
 		insinto /usr/share/doc/${PF}/examples/
-        doins -r examples/*
-    fi
+		doins -r examples/*
+	fi
 }

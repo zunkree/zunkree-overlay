@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,14 +19,13 @@ DEPEND=">=dev-lang/dmd-2.063"
 RDEPEND="${DEPEND}
 		dev-libs/libgit2"
 
-
 pkg_setup(){
 	if use x86 ; then MODEL="-m32" ; fi
 	if use amd64 ; then MODEL="-m64" ; fi
 }
 
 src_compile() {
-	dmd -fPIC ${MODEL} -lib -oflibdlibgit.a `find src -type f -name '*.d' -not -name 'package.d'` 
+	dmd -fPIC ${MODEL} -lib -oflibdlibgit.a `find src -type f -name '*.d' -not -name 'package.d'`
 }
 
 src_install() {

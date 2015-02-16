@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,10 +7,10 @@ USE_RUBY="ruby19"
 
 inherit ruby-fakegem
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION="A common interface for Ruby's HTTP libraries."
+HOMEPAGE="https://github.com/savonrb/httpi"
 
-LICENSE="Apache-2.0"
+LICENSE="MIT"
 SLOT="${PV}"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
