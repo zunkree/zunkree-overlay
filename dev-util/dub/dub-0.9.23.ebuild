@@ -21,7 +21,7 @@ DEPEND="dev-lang/dmd
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	./build.sh
+	dmd -w -ofbin/dub -release -O -inline -L-lcurl -version=DubUseCurl -Isource @build-files.txt
 }
 
 src_install() {
