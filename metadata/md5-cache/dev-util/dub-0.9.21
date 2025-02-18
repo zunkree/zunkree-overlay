@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-lang/dmd net-misc/curl dev-vcs/git
+DESCRIPTION=Package manager for D packages
+EAPI=5
+HOMEPAGE=https://github.com/rejectedsoftware/dub
+IUSE=examples
+KEYWORDS=~x86 ~amd64
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=dev-lang/dmd net-misc/curl
+SLOT=0
+_eclasses_=git-2	ff0c6913068da64bb51417d8eceff36a
+_md5_=89c83e1486933da97fee530d94101136

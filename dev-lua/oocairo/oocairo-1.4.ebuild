@@ -7,8 +7,8 @@ EAPI=3
 inherit eutils
 
 DESCRIPTION="Lua bindings to the cairo library"
-HOMEPAGE="http://oocairo.naquadah.org/"
-SRC_URI="http://oocairo.naquadah.org/dist/${P}.tar.bz2"
+HOMEPAGE="https://github.com/awesomeWM/oocairo"
+SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

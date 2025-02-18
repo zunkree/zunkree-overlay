@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install setup unpack
+DEPEND=>=dev-lang/dmd-2.063 dev-vcs/git
+DESCRIPTION=These are the D bindings to the libgit2 library.
+EAPI=5
+HOMEPAGE=https://github.com/AndrejMitrovic/dlibgit
+IUSE=examples
+LICENSE=GPL-2
+PROPERTIES=live
+RDEPEND=>=dev-lang/dmd-2.063 dev-libs/libgit2
+SLOT=0
+_eclasses_=git-2	ff0c6913068da64bb51417d8eceff36a
+_md5_=4c3eb1bdf3c8f2fa4efed48502e59a12
